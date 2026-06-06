@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { AuthProvider, useAuth } from './contexts/AuthContext';
 import Login from './pages/Login/Login';
@@ -10,8 +10,8 @@ import Etapas from './pages/Etapas/Etapas';
 import Funcionarios from './pages/Funcionarios/Funcionarios';
 import Testes from './pages/Testes/Testes';
 import Relatorio from './pages/Relatorio/Relatorio';
-import styles from './App.module.css';
 import Qualidade from './pages/Qualidade/Qualidade';
+import styles from './App.module.css';
 
 const PrivateRoute: React.FC<{ element: React.ReactElement }> = ({ element }) => {
   const { usuario } = useAuth();
@@ -24,15 +24,6 @@ const PrivateRoute: React.FC<{ element: React.ReactElement }> = ({ element }) =>
 };
 
 function AppRoutes() {
-  useEffect(() => {
-    const token = localStorage.getItem('@Aerocode:token');
-    const usuario = localStorage.getItem('@Aerocode:usuario');
-    
-    if (token && !usuario) {
-      localStorage.removeItem('@Aerocode:token');
-    }
-  }, []);
-
   return (
     <div className={styles.app}>
       <Routes>
