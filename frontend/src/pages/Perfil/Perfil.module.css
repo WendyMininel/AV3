@@ -1,0 +1,327 @@
+.perfil {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f5f5f5;
+  width: 100%;
+}
+
+.mainContent {
+  flex: 1;
+  margin-left: 280px;
+  width: calc(100% - 280px);
+  min-height: 100vh;
+}
+
+.content {
+  padding: 2rem;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.title {
+  font-size: 1.5rem;
+  color: #023261;
+  font-weight: 600;
+  word-break: break-word;
+}
+
+.editButton {
+  background-color: #26639d;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.editButton:hover {
+  background-color: #1a4f7a;
+  transform: translateY(-2px);
+}
+
+.profileCard {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  width: 100%;
+}
+
+.avatarSection {
+  background: linear-gradient(135deg, #26639d 0%, #023261 100%);
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #26639d;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  flex-shrink: 0;
+}
+
+.userInfo h3 {
+  color: white;
+  font-size: 1.5rem;
+  margin-bottom: 0.3rem;
+  word-break: break-word;
+}
+
+.permissionBadge {
+  display: inline-block;
+  padding: 0.2rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.administrador {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.engenheiro {
+  background-color: #d1ecf1;
+  color: #0c5460;
+}
+
+.operador {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.successMessage {
+  margin: 1rem 2rem;
+  padding: 0.8rem;
+  background-color: #d4edda;
+  color: #155724;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.form {
+  padding: 2rem;
+}
+
+.formGroup {
+  margin-bottom: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.formGroup label {
+  font-weight: 500;
+  color: #333;
+  font-size: 0.9rem;
+}
+
+.formGroup input {
+  padding: 0.7rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9rem;
+  width: 100%;
+}
+
+.formGroup input:focus {
+  outline: none;
+  border-color: #26639d;
+}
+
+.formRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.buttonGroup {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.saveButton, .cancelButton {
+  padding: 0.7rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.saveButton {
+  background-color: #28a745;
+  color: white;
+}
+
+.saveButton:hover {
+  background-color: #218838;
+  transform: translateY(-2px);
+}
+
+.cancelButton {
+  background-color: #6c757d;
+  color: white;
+}
+
+.cancelButton:hover {
+  background-color: #5a6268;
+  transform: translateY(-2px);
+}
+
+.infoSection {
+  padding: 2rem;
+}
+
+.infoRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.infoItem label {
+  display: block;
+  font-size: 0.8rem;
+  color: #666;
+  margin-bottom: 0.3rem;
+}
+
+.infoItem p {
+  font-size: 1rem;
+  color: #333;
+  font-weight: 500;
+  word-break: break-word;
+}
+
+.errorMessage {
+  color: #dc3545;
+  font-size: 0.75rem;
+  margin-top: 0.25rem;
+}
+
+.warningMessage {
+  background-color: #fff3cd;
+  color: #856404;
+  border: 1px solid #ffeeba;
+}
+
+.successMessage {
+  margin: 1rem 2rem;
+  padding: 0.8rem;
+  background-color: #d4edda;
+  color: #155724;
+  border-radius: 8px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .mainContent {
+    margin-left: 0;
+    width: 100%;
+  }
+  
+  .content {
+    padding: 1rem;
+  }
+  
+  .title {
+    font-size: 1.2rem;
+  }
+  
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .editButton {
+    white-space: normal;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .avatarSection {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.5rem;
+  }
+  
+  .infoRow {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .formRow {
+    grid-template-columns: 1fr;
+  }
+  
+  .form {
+    padding: 1.5rem;
+  }
+  
+  .infoSection {
+    padding: 1.5rem;
+  }
+  
+  .userInfo h3 {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  
+  .userInfo {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .avatar {
+    width: 60px;
+    height: 60px;
+    font-size: 1.8rem;
+  }
+  
+  .formGroup label {
+    font-size: 0.8rem;
+  }
+  
+  .formGroup input {
+    padding: 0.6rem;
+    font-size: 0.8rem;
+  }
+  
+  .saveButton, .cancelButton {
+    padding: 0.6rem 1rem;
+    font-size: 0.8rem;
+    width: 100%;
+    text-align: center;
+  }
+}

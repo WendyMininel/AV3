@@ -1,0 +1,79 @@
+.header {
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+}
+
+.pageTitle {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #023261;
+}
+
+.headerRight {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.userBadge {
+  text-align: right;
+}
+
+.userBadgeName {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #333;
+}
+
+.userBadgeRole {
+  display: block;
+  font-size: 0.7rem;
+  color: #666;
+}
+
+.logoutButton {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.8rem;
+  transition: all 0.3s ease;
+}
+
+.logoutButton:hover {
+  background-color: #c82333;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 0.8rem 1rem;
+  }
+  
+  .pageTitle {
+    font-size: 0.9rem;
+    margin-left: 50px;
+  }
+  
+  .userBadgeName {
+    font-size: 0.75rem;
+  }
+  
+  .logoutButton {
+    padding: 0.35rem 0.7rem;
+    font-size: 0.7rem;
+  }
+}

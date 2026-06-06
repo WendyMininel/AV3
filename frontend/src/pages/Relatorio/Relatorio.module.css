@@ -1,0 +1,260 @@
+.relatorio {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f5f5f5;
+  width: 100%;
+}
+
+.mainContent {
+  flex: 1;
+  margin-left: 280px;
+  width: calc(100% - 280px);
+  min-height: 100vh;
+}
+
+.content {
+  padding: 2rem;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.header {
+  margin-bottom: 2rem;
+}
+
+.title {
+  font-size: 1.5rem;
+  color: #023261;
+  font-weight: 600;
+  word-break: break-word;
+}
+
+.formSection {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.formSection h3 {
+  color: #023261;
+  margin-bottom: 1.5rem;
+  font-size: 1.2rem;
+  word-break: break-word;
+}
+
+.formGroup {
+  margin-bottom: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.formGroup label {
+  font-weight: 500;
+  color: #333;
+}
+
+.formGroup input,
+.formGroup select {
+  padding: 0.7rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9rem;
+  width: 100%;
+}
+
+.formGroup input:focus,
+.formGroup select:focus {
+  outline: none;
+  border-color: #26639d;
+}
+
+.generateButton {
+  background-color: #26639d;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-top: 0.5rem;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.generateButton:hover {
+  background-color: #1a4f7a;
+  transform: translateY(-2px);
+}
+
+.relatorioSection {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.relatorioHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.relatorioHeader h3 {
+  color: #023261;
+  font-size: 1.2rem;
+  word-break: break-word;
+}
+
+.saveButton {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.saveButton:hover {
+  background-color: #218838;
+  transform: translateY(-2px);
+}
+
+.relatorioContent {
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 1.5rem;
+  font-family: 'Courier New', monospace;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow-x: auto;
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+.errorInput {
+  border-color: #dc3545 !important;
+}
+
+.errorMessage {
+  color: #dc3545;
+  font-size: 0.75rem;
+  margin-top: 0.25rem;
+  display: block;
+}
+
+.buttonGroup {
+  display: flex;
+  gap: 1rem;
+}
+
+.pdfButton {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.pdfButton:hover {
+  background-color: #c82333;
+  transform: translateY(-2px);
+}
+
+.saveButton {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.saveButton:hover {
+  background-color: #218838;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .mainContent {
+    margin-left: 0;
+    width: 100%;
+  }
+  
+  .content {
+    padding: 1rem;
+  }
+  
+  .title {
+    font-size: 1.2rem;
+  }
+  
+  .formSection {
+    padding: 1.5rem;
+  }
+  
+  .relatorioSection {
+    padding: 1.5rem;
+  }
+  
+  .relatorioHeader {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .saveButton {
+    white-space: normal;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .relatorioContent {
+    font-size: 0.7rem;
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .formSection h3 {
+    font-size: 1rem;
+  }
+  
+  .formGroup label {
+    font-size: 0.8rem;
+  }
+  
+  .formGroup input,
+  .formGroup select {
+    padding: 0.6rem;
+    font-size: 0.8rem;
+  }
+  
+  .generateButton {
+    padding: 0.7rem 1rem;
+    font-size: 0.9rem;
+  }
+}

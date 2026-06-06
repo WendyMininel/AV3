@@ -1,0 +1,235 @@
+.container {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.filterContainer {
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.filterSelect {
+  padding: 0.5rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9rem;
+  background: white;
+  cursor: pointer;
+  min-width: 250px;
+}
+
+.timeline {
+  position: relative;
+  padding-left: 2rem;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 1rem;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: #dee2e6;
+}
+
+.timelineItem {
+  display: flex;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.timelineMarker {
+  width: 2rem;
+  height: 2rem;
+  background: white;
+  border: 2px solid #26639d;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  margin-right: 1rem;
+  z-index: 1;
+  background: white;
+}
+
+.timelineMarker.concluida {
+  background: #28a745;
+  border-color: #28a745;
+  color: white;
+}
+
+.timelineMarker.andamento {
+  background: #ffc107;
+  border-color: #ffc107;
+  color: #fff;
+}
+
+.timelineContent {
+  flex: 1;
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.etapaHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.etapaHeader h3 {
+  font-size: 1rem;
+  color: #333;
+}
+
+.statusBadge {
+  padding: 0.2rem 0.6rem;
+  border-radius: 20px;
+  font-size: 0.7rem;
+  font-weight: 500;
+}
+
+.statusBadge.pendente {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.statusBadge.andamento {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.statusBadge.concluida {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.etapaAeronave {
+  font-size: 0.8rem;
+  color: #26639d;
+  margin-bottom: 0.3rem;
+  font-weight: 500;
+}
+
+.etapaPrazo {
+  font-size: 0.8rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.funcionariosList {
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  background: white;
+  border-radius: 6px;
+  font-size: 0.8rem;
+}
+
+.funcionariosList strong {
+  display: block;
+  margin-bottom: 0.3rem;
+  color: #023261;
+}
+
+.funcionariosList ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.funcionariosList li {
+  padding: 0.2rem 0;
+  color: #555;
+}
+
+.etapaActions {
+  margin-top: 0.8rem;
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.startButton, .finishButton, .associarButton {
+  padding: 0.4rem 0.8rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: all 0.3s ease;
+}
+
+.startButton {
+  background-color: #26639d;
+  color: white;
+}
+
+.startButton:hover {
+  background-color: #1a4f7a;
+}
+
+.finishButton {
+  background-color: #28a745;
+  color: white;
+}
+
+.finishButton:hover {
+  background-color: #218838;
+}
+
+.associarButton {
+  background-color: #17a2b8;
+  color: white;
+}
+
+.associarButton:hover {
+  background-color: #138496;
+}
+
+.funcionarioSelect {
+  padding: 0.3rem;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.8rem;
+}
+
+.emptyState {
+  text-align: center;
+  padding: 3rem;
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+  
+  .timeline {
+    padding-left: 1rem;
+  }
+  
+  .timelineMarker {
+    width: 1.5rem;
+    height: 1.5rem;
+    font-size: 0.8rem;
+  }
+  
+  .filterContainer {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .filterSelect {
+    width: 100%;
+  }
+}

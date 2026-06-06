@@ -1,0 +1,140 @@
+.container {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.filters {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.searchInput {
+  flex: 1;
+  padding: 0.7rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9rem;
+}
+
+.searchInput:focus {
+  outline: none;
+  border-color: #26639d;
+}
+
+.filterSelect {
+  padding: 0.7rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9rem;
+  background: white;
+  cursor: pointer;
+}
+
+.tableWrapper {
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th {
+  text-align: left;
+  padding: 1rem 0.5rem;
+  background-color: #f8f9fa;
+  border-bottom: 2px solid #dee2e6;
+  color: #333;
+  font-weight: 600;
+}
+
+.table td {
+  padding: 0.8rem 0.5rem;
+  border-bottom: 1px solid #dee2e6;
+  color: #555;
+}
+
+.table tr:hover {
+  background-color: #f8f9fa;
+}
+
+.permissionBadge {
+  display: inline-block;
+  padding: 0.2rem 0.6rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.administrador {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.engenheiro {
+  background-color: #d1ecf1;
+  color: #0c5460;
+}
+
+.operador {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.deleteButton {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 0.3rem 0.8rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: all 0.3s ease;
+}
+
+.deleteButton:hover {
+  background-color: #c82333;
+}
+
+.emptyState {
+  text-align: center;
+  padding: 3rem;
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+  
+  .filters {
+    flex-direction: column;
+  }
+  
+  .table th {
+    display: none;
+  }
+  
+  .table td {
+    display: block;
+    text-align: right;
+    padding-left: 50%;
+    position: relative;
+  }
+  
+  .table td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 0.5rem;
+    width: 45%;
+    text-align: left;
+    font-weight: 600;
+    color: #333;
+  }
+}

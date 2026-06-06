@@ -1,0 +1,103 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Aeronave {
+  codigo     String   @id
+  modelo     String
+  tipo       String
+  capacidade Int
+  alcance    Int
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+  
+  pecas      PecaAeronave[]
+  etapas     Etapa[]
+  testes     Teste[]
+}
+
+model Peca {
+  id         String   @id
+  nome       String
+  tipo       String
+  fornecedor String
+  status     String
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+  
+  aeronaves  PecaAeronave[]
+}
+
+model PecaAeronave {
+  pecaId      String
+  aeronaveCodigo String
+  
+  peca        Peca     @relation(fields: [pecaId], references: [id], onDelete: Cascade)
+  aeronave    Aeronave @relation(fields: [aeronaveCodigo], references: [codigo], onDelete: Cascade)
+  
+  @@id([pecaId, aeronaveCodigo])
+  @@map("PecaAeronave")
+}
+
+model Funcionario {
+  id             String   @id
+  nome           String
+  telefone       String   @unique
+  endereco       String
+  usuario        String   @unique
+  senha          String
+  nivelPermissao String
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+  
+  etapas         EtapaFuncionario[]
+}
+
+model Etapa {
+  id             String   @id
+  nome           String
+  prazo          DateTime
+  status         String
+  aeronaveCodigo String
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+  
+  aeronave       Aeronave @relation(fields: [aeronaveCodigo], references: [codigo])
+  funcionarios   EtapaFuncionario[]
+}
+
+model EtapaFuncionario {
+  funcionarioId String
+  etapaId       String
+  
+  funcionario   Funcionario @relation(fields: [funcionarioId], references: [id], onDelete: Cascade)
+  etapa         Etapa       @relation(fields: [etapaId], references: [id], onDelete: Cascade)
+  
+  @@id([funcionarioId, etapaId])
+  @@map("EtapaFuncionario")
+}
+
+model Teste {
+  id             String   @id
+  tipo           String
+  resultado      String
+  aeronaveCodigo String
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+  
+  aeronave       Aeronave @relation(fields: [aeronaveCodigo], references: [codigo])
+}
+
+model MetricaLatencia {
+  id                   Int      @id @default(autoincrement())
+  endpoint             String
+  latenciaMs           Float
+  tempoRespostaMs      Float
+  tempoProcessamentoMs Float
+  timestamp            DateTime @default(now())
+}

@@ -1,0 +1,96 @@
+.container {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 500px;
+}
+
+.table th {
+  text-align: left;
+  padding: 1rem 0.5rem;
+  background-color: #f8f9fa;
+  color: #333;
+  font-weight: 600;
+  border-bottom: 2px solid #dee2e6;
+}
+
+.table td {
+  padding: 0.8rem 0.5rem;
+  border-bottom: 1px solid #dee2e6;
+  color: #555;
+}
+
+.table tr:hover {
+  background-color: #f8f9fa;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.2rem 0.6rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.comercial {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.militar {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.deleteButton {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 0.3rem 0.8rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: all 0.3s ease;
+}
+
+.deleteButton:hover {
+  background-color: #c82333;
+}
+
+.emptyState {
+  background: white;
+  border-radius: 12px;
+  padding: 3rem;
+  text-align: center;
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+  
+  .table th, .table td {
+    padding: 0.6rem 0.3rem;
+    font-size: 0.85rem;
+  }
+  
+  .badge {
+    font-size: 0.7rem;
+    padding: 0.15rem 0.5rem;
+  }
+  
+  .deleteButton {
+    padding: 0.25rem 0.6rem;
+    font-size: 0.7rem;
+  }
+}

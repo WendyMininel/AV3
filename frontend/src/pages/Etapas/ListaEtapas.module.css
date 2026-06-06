@@ -1,0 +1,399 @@
+.container {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.aeronaveGroup {
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 1rem;
+}
+
+.aeronaveGroup:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.aeronaveTitle {
+  font-size: 1.2rem;
+  color: #023261;
+  margin-bottom: 1rem;
+  padding-left: 0.5rem;
+  border-left: 4px solid #26639d;
+}
+
+.filterContainer {
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.filterSelect {
+  padding: 0.5rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9rem;
+  background: white;
+  cursor: pointer;
+  flex: 1;
+  min-width: 200px;
+}
+
+.timeline {
+  position: relative;
+  padding-left: 2rem;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 1rem;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: #dee2e6;
+}
+
+.timelineItem {
+  display: flex;
+  margin-bottom: 2rem;
+  position: relative;
+  flex-wrap: wrap;
+}
+
+.timelineMarker {
+  width: 2rem;
+  height: 2rem;
+  background: white;
+  border: 2px solid #26639d;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  margin-right: 1rem;
+  z-index: 1;
+  background: white;
+  flex-shrink: 0;
+}
+
+.timelineMarker.concluida {
+  background: #28a745;
+  border-color: #28a745;
+  color: white;
+}
+
+.timelineMarker.andamento {
+  background: #ffc107;
+  border-color: #ffc107;
+  color: #fff;
+}
+
+.timelineContent {
+  flex: 1;
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 1rem;
+  min-width: 0;
+}
+
+.etapaHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.etapaHeader h3 {
+  font-size: 1rem;
+  color: #333;
+  word-break: break-word;
+}
+
+.statusBadge {
+  padding: 0.2rem 0.6rem;
+  border-radius: 20px;
+  font-size: 0.7rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.statusBadge.pendente {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.statusBadge.andamento {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.statusBadge.concluida {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.etapaPrazo {
+  font-size: 0.8rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+  word-break: break-word;
+}
+
+.funcionariosList {
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  background: white;
+  border-radius: 6px;
+  font-size: 0.8rem;
+}
+
+.funcionariosList strong {
+  display: block;
+  margin-bottom: 0.3rem;
+  color: #023261;
+}
+
+.funcionariosList ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.funcionariosList li {
+  padding: 0.2rem 0;
+  color: #555;
+  word-break: break-word;
+}
+
+.funcionarioNome {
+  font-weight: 500;
+  color: #333;
+}
+
+.funcionarioNivel {
+  color: #888;
+  font-size: 0.75rem;
+}
+
+.semFuncionarios {
+  font-size: 0.75rem;
+  color: #999;
+  margin: 0.5rem 0;
+  font-style: italic;
+}
+
+.etapaActions {
+  margin-top: 0.8rem;
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.startButton, .finishButton, .associarButton {
+  padding: 0.4rem 0.8rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: all 0.3s ease;
+}
+
+.startButton {
+  background-color: #26639d;
+  color: white;
+}
+
+.startButton:hover {
+  background-color: #1a4f7a;
+}
+
+.startButton.disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.startButton.disabled:hover {
+  transform: none;
+  background-color: #6c757d;
+}
+
+.finishButton {
+  background-color: #28a745;
+  color: white;
+}
+
+.finishButton:hover {
+  background-color: #218838;
+}
+
+.associarButton {
+  background-color: #17a2b8;
+  color: white;
+}
+
+.associarButton:hover {
+  background-color: #138496;
+}
+
+.associarSection {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.funcionarioSelect {
+  padding: 0.3rem;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.8rem;
+}
+
+.emptyState {
+  text-align: center;
+  padding: 3rem;
+  color: #666;
+}
+
+.errorMessage {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  border: 1px solid #f5c6cb;
+}
+
+.startButton:disabled, .finishButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+.etapaHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.etapaHeaderActions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.excluirEtapaButton {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  color: #dc3545;
+}
+
+.excluirEtapaButton:hover {
+  background-color: #dc3545;
+  color: white;
+  transform: scale(1.05);
+}
+
+.excluirEtapaButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.funcionariosItems {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.3rem;
+}
+
+.funcionarioItem {
+  background-color: #e9ecef;
+  padding: 0.3rem 0.6rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.removerFuncionarioButton {
+  background: none;
+  border: none;
+  color: #dc3545;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0 0.2rem;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.removerFuncionarioButton:hover {
+  background-color: #dc3545;
+  color: white;
+  transform: scale(1.1);
+}
+
+.removerFuncionarioButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+  
+  .timeline {
+    padding-left: 1rem;
+  }
+  
+  .timelineMarker {
+    width: 1.5rem;
+    height: 1.5rem;
+    font-size: 0.8rem;
+  }
+  
+  .filterContainer {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .filterSelect {
+    width: 100%;
+  }
+  
+  .etapaHeader h3 {
+    font-size: 0.9rem;
+  }
+  
+  .startButton, .finishButton, .associarButton {
+    padding: 0.35rem 0.7rem;
+    font-size: 0.7rem;
+  }
+  
+  .aeronaveTitle {
+    font-size: 1rem;
+  }
+}

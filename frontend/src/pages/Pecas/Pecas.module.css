@@ -1,0 +1,287 @@
+.pecas {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f5f5f5;
+  width: 100%;
+}
+
+.mainContent {
+  flex: 1;
+  margin-left: 280px;
+  width: calc(100% - 280px);
+  min-height: 100vh;
+}
+
+.content {
+  padding: 2rem;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.title {
+  font-size: 1.5rem;
+  color: #023261;
+  font-weight: 600;
+}
+
+.createButton {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.createButton:hover {
+  background-color: #218838;
+  transform: translateY(-2px);
+}
+
+.listContainer {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.pecaCard {
+  background: #f8f9fa;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid #e9ecef;
+  transition: all 0.3s ease;
+}
+
+.pecaCard:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.pecaHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.pecaInfo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.pecaInfo h3 {
+  font-size: 1.2rem;
+  color: #023261;
+  margin: 0;
+}
+
+.pecaActions {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.pecaDetails {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.pecaDetails p {
+  margin: 0;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.statusBadge {
+  display: inline-block;
+  padding: 0.2rem 0.6rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.em_producao {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.em_transporte {
+  background-color: #d1ecf1;
+  color: #0c5460;
+}
+
+.pronta {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.statusSelect {
+  padding: 0.3rem 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.8rem;
+  background-color: white;
+  cursor: pointer;
+}
+
+.deleteButton {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 0.3rem 0.8rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.75rem;
+  transition: all 0.3s ease;
+}
+
+.deleteButton:hover {
+  background-color: #c82333;
+  transform: translateY(-1px);
+}
+
+.aeronavesSection {
+  margin-top: 1rem;
+  padding-top: 0.8rem;
+  border-top: 1px dashed #dee2e6;
+}
+
+.aeronavesHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.8rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.aeronavesHeader strong {
+  color: #023261;
+  font-size: 0.9rem;
+}
+
+.associarButton {
+  background-color: #17a2b8;
+  color: white;
+  border: none;
+  padding: 0.25rem 0.6rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.7rem;
+  transition: all 0.3s ease;
+}
+
+.associarButton:hover {
+  background-color: #138496;
+}
+
+.aeronaveSelect {
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #17a2b8;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.75rem;
+  background-color: white;
+  cursor: pointer;
+}
+
+.aeronavesList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.aeronaveItem {
+  background-color: #e9ecef;
+  padding: 0.3rem 0.6rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.aeronaveNome {
+  font-weight: 500;
+  color: #333;
+}
+
+.aeronaveCodigo {
+  color: #666;
+  font-size: 0.7rem;
+}
+
+.removerAssociacaoButton {
+  background: none;
+  border: none;
+  color: #dc3545;
+  font-size: 1.1rem;
+  cursor: pointer;
+  padding: 0 0.2rem;
+  font-weight: bold;
+}
+
+.removerAssociacaoButton:hover {
+  color: #c82333;
+  transform: scale(1.1);
+}
+
+.semAeronaves {
+  color: #999;
+  font-size: 0.8rem;
+  font-style: italic;
+  margin: 0.5rem 0 0;
+}
+
+@media (max-width: 768px) {
+  .mainContent {
+    margin-left: 0;
+    width: 100%;
+  }
+  
+  .content {
+    padding: 1rem;
+  }
+  
+  .title {
+    font-size: 1.2rem;
+  }
+  
+  .pecaHeader {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .pecaDetails {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .aeronavesHeader {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
